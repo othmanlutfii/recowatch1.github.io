@@ -1,0 +1,50 @@
+{% extends 'index.html' %}
+
+
+{% block content %}
+
+
+{%block navbar%}
+ <nav class="navbar navbar-light navbar-expand-md navbar navbar-expand-lg fixed-top" id="mainNav" style="opacity: 1;">
+        <div class="container"><a class="navbar-brand js-scroll-trigger" href="#">Recowatch</a><button data-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
+                value="Menu"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link active js-scroll-trigger" href="{{ url_for('index') }}">About</a></li>
+                    <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link js-scroll-trigger" href="{{ url_for('index') }}">FIND FILM</a></li>
+                    <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link js-scroll-trigger" href="{{ url_for('index') }}">FUN FACT</a></li>
+                    <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link js-scroll-trigger" href="{{ url_for('index') }}">Article</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+{%endblock%}
+
+
+
+	<section id="about" class="content-section text-center" style = "background-image: url(static/img/bg2.jpeg);opacity: 1;filter: hue-rotate(0deg);" >
+        <div class="container"  >
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h1>Here are our recommendations for you!</h1>
+                    <br><br>
+                    <div class="bawah">
+                        {%for data in hasil%}
+                        <h2>{{ data }}
+                            <h3>
+                            <button  class="button button5" type="button"><a style="color:#000000" href="https://www.google.com/search?q= + {{data}}"/>Find out about {{ data }} >> </a></button>
+                            </h3>
+                        </h2>
+
+
+
+                        {%endfor%}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+

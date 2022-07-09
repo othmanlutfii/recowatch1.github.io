@@ -1,0 +1,212 @@
+
+{% extends 'index.html' %}
+
+{% block content %}
+
+{%block navbar%}
+ <nav class="navbar navbar-light navbar-expand-md navbar navbar-expand-lg fixed-top" id="mainNav" style="opacity: 1;">
+        <div class="container"><a class="navbar-brand js-scroll-trigger" href="#">Recowatch</a><button data-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
+                value="Menu"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link active js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link js-scroll-trigger" href="#search">FIND FILM</a></li>
+                    <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link js-scroll-trigger" href="#facts">FUN FACT</a></li>
+                    <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link js-scroll-trigger" href="#Article">Article</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+{%endblock%}
+
+<header class="masthead" style="background-image: url(static/img/Movie-Genres-Types-of-Movies-List-of-Genres-and-Categories-Header-StudioBinder.jpg);opacity: 1;filter: hue-rotate(0deg);">
+        <div class="intro-body" style="filter: brightness(200%);opacity: 1;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="brand-heading" style="font-size: 80px;font-family: Aclonica, sans-serif;">Are you bored yet?</h1>
+                        <p class="intro-text" style="font-family: Cabin, sans-serif;">We will help you find a movie based on your moods!</p><a class="btn btn-link btn-circle" role="button" href="#about"><i class="fa fa-angle-double-down animated"></i></a></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="content-section text-center" style="background-image: url(static/img/bg4.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>About US</h2>
+                    <p>
+                        <strong> Recowatch is a website for recommending movies based on your favorite movie. The trick is that you only need to enter the name of the movie you like and then we will find another movie that looks like it</strong>
+                    </p>
+                    <p>Our goal is to help you find happiness!!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="search" class="download-section content-section text-center" style="background-image:url(static/img/bg8.jpeg)">
+    <h1><strong>Tell us your favorite movie!</strong></h1>
+    <div>
+                    <br><br>
+
+        <form action="{{ url_for('reco') }}" method="post">
+
+            <input type="text" name="var1"/>
+
+            <h3>
+                                    <br><br>
+
+            <button class="button button5" type="submit"> let's see which movie might suit you </button>
+            </h3>
+        </form>
+
+    </div>
+    </section>
+
+    
+    <section id="facts" class="text-center">
+        <h2 style="padding-top: 90px;"><strong>Fun Facts</strong></h2>
+        <p></p>
+        <h4> Highest Grossing Movies in 2021</h4>
+        <div class="row row1" >
+            <div class="column column1" >
+                Spider-Man: No Way Home <p></p>
+                <iframe width="250" height="190" src="https://www.youtube.com/embed/JfVOs4VSpmA"></iframe>
+            </div>
+            
+            <div class="column column1" >
+                Shang-Chi and the Legend of the Ten Rings <p></p>
+                <iframe width="250" height="190" src="https://www.youtube.com/embed/giWIr7U1deA"></iframe>
+            </div>
+            
+            <div class="column column1">
+                Venom: Let There Be Carnage <p></p>
+                <iframe width="250" height="190" src="https://www.youtube.com/embed/-ezfi6FQ8Ds"></iframe>
+            </div>
+            
+            <div class="column column1">
+                Black Widow <p></p>
+                <iframe width="250" height="190" src="https://www.youtube.com/embed/ybji16u608U"></iframe>
+            </div>
+
+            <div class="column column1" >
+                F9: The Fast Saga <p></p>
+                <iframe width="250" height="190" src="https://www.youtube.com/embed/aSiDu3Ywi8E"></iframe>
+            </div>
+
+            <div class="column column1">
+                Eternals <p></p>
+                <iframe width="250" height="190" src="https://www.youtube.com/embed/x_me3xsvDgk"></iframe>
+            </div>
+
+            <div class="column column1">
+                No Time to Die <p></p>
+                <iframe width="250" height="190" src="https://www.youtube.com/embed/N_gD9-Oa0fg"></iframe>
+            </div>
+
+            <div class="column column1">
+                A Quiet Place Part II <p></p>
+                <iframe width="250" height="190" src="https://www.youtube.com/embed/BpdDN9d9Jio"></iframe>
+            </div>
+          </div>
+
+    </section>
+
+
+    <section id="facts" class="text-center">
+        <div class="container">
+            <div class="row">
+        <div class="col-lg-8 mx-auto">
+        <h4 style="padding-top: 90px;">Do you know what was the first movie ever made?</h4>
+        
+            
+                <h6 style="text-decoration: underline; padding-top: 50px;">
+                    <a style="color:#ffffff" href="https://www.google.com/search?q= + The Horse In Motion (1878)">
+                        The Horse In Motion (1878)
+                    </a>
+                </h6>
+                <iframe width="550" height="290" src="https://www.youtube.com/embed/IEqccPhsqgA"></iframe>
+            
+            <p>The movie was made to scientifically answer a popularly debated question during this era: Are all four of a horse’s hooves ever off the ground at the same time while the horse is galloping? 
+                The video proved that they indeed were and, more importantly, motion photography was born.</p>
+            <p></p>
+
+                <h6 style="text-decoration: underline; padding-top: 50px;">
+
+                    <a style="color:#ffffff" href="https://www.google.com/search?q= + Roundhay Garden Scene (1888)">
+                    Roundhay Garden Scene (1888)
+                    </a>
+
+                </h6>
+                <iframe width="550" height="290" src="https://www.youtube.com/embed/F1i40rnpOsA"></iframe>
+            
+            <p>The world’s earliest surviving motion-picture film, showing actual consecutive action is called Roundhay Garden Scene. It’s a short film directed by French inventor Louis Le Prince. While it’s just 2.11 seconds long, it is technically a movie. 
+                According to the Guinness Book of Records, it is the oldest surviving film in existence.</p>
+            <p></p>
+
+                <h6 style="text-decoration: underline; padding-top:50px;  href="https://www.google.com/search?q= + THE HORSE IN MOTION (1878)"/;">
+                    <a style="color:#ffffff" href="https://www.google.com/search?q= + Arrival of a Train (1895)">
+                    Arrival of a Train (1895)
+                    </a>
+
+                </h6>
+                <iframe width="550" height="290" src="https://www.youtube.com/embed/1dgLEDdFddk"></iframe>
+            
+                <p>This 50-second silent film shows the entry of a train pulled by a steam locomotive into a train station of the French coastal town of La Ciotat. 
+                    It’s a single, unedited view illustrating an aspect of everyday life, and the film consists of one continuous real-time shot. 
+                    There’s also a an urban legend associated with this movie that says when the film was first shown, 
+                    the audience was so scared by the image of a life-sized train barreling toward them that people screamed and ran to the back of the room.
+
+                </p>
+            <p></p>
+                <a href="https://headsup.scoutlife.org/what-was-the-first-movie-ever-made/" style="color: brown; text-decoration: underline;">
+                    (Source: https://headsup.scoutlife.org/what-was-the-first-movie-ever-made/)</a>
+
+        </div>
+                </div>
+        </div>
+        
+
+    </section>
+
+    
+
+    <section id="Article" class="text-center">
+        <h2 style="padding-top: 90px;">More Articles</h2>
+        <p>These are some articles recommended by us. Hope you enjoy!</p>
+        <div class="row row1">
+            <div class="column column1 column2">
+                <a href="https://www.marieclaire.com/culture/g37260832/2000s-movies/">
+                    <img src="static/img/article2.jpeg" width="270" height="168"><p></p>
+                    <h6>The 45 Best 2000s Movies</h6>
+                </a>
+            </div>
+            <div class="column column1 column2">
+                <a href="https://www.oscars.org/oscars/ceremonies/2021">
+                    <img src="static/img/article3.jpeg" width="270" height="168"><p></p>
+                    <h6>THE 93RD ACADEMY AWARDS | 2021</h6>
+                </a>
+            </div>
+            
+            <div class="column column1 column2">
+                <a href="https://bestlifeonline.com/movie-facts/">
+                    <img src="static/img/article6.jpg" width="270" height="168" ><p></p>
+                    <h6>Movies Facts that blow ur mind!</h6>
+                </a>
+            </div>
+                
+            <div class="column column1 column2">
+                <a href="https://thebestbrainpossible.com/movie-help-mental-health-therapy/">
+                    <img src="static/img/article7.jpg" width="270" height="168" ><p></p>
+                    <h6>Movies and Mental Health</h6>
+                </a>
+            </div>
+
+        </div>    
+    </section>
+    
+
+
+    <div class="map-clean"></div>
+{% endblock %}
